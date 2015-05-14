@@ -1,14 +1,14 @@
-# clojure-sockets
+# Clojure Sockets (Stub)
 
-A Clojure library designed to ... well, that part is up to you.
+This is a simple show case project for using Web Sockets with Clojure backend.
 
 ## Usage
 
-FIXME
+Install http://leiningen.org/ and run following commands:
+
+    lein deps
+    lein run
 
 ## License
 
-Copyright © 2015 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+MIT
