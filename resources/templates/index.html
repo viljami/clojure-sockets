@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Socket test</title>
+    </head>
+    <body>
+        <h2>Hello {{name}}</h2>
+        <input type="text" >
+	<script type="text/javascript">
+		var s = new WebSocket('ws://localhost:9090');
+		s.onmessage = function(e){ 
+			var p = document.createElement('p');
+			p.innerText = e.data;
+			document.body.appendChild(p);
+		};
+
+		var input = document.body.getElementsByTagName('input')[0];
+		input.addEventListener('keydown', function(e){
+			if (e.keyCode !== 32 && e.keyCode !== 13) return;
+			s.send(input.value);
+			input.value = '';
+                });
+	</script>
+    </body>
+</html>
